@@ -18,4 +18,3 @@ deployment:
     commands:
       - aws s3 sync . s3://toketenakunaru.com/ --delete
 
-
