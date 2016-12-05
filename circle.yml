@@ -16,4 +16,4 @@ deployment:
   production:
     branch: master
     commands:
-      - aws s3 sync html/ s3://toketenakunaru.com/ --delete
+      - aws s3 sync . s3://toketenakunaru.com/ --delete
