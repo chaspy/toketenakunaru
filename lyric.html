@@ -12,7 +12,22 @@
     $("#header").load("header.html");
     $("#footer").load("footer.html");
     $("#menu").load("menu.html");
-    $("#lyric-menu").load("lyric-menu.html");
+    $("#button1").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button2").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button3").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button4").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button5").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button6").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button7").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
+    $("#button8").on('click',function() {
+      $("#lyric").load('lyric/' + $(this).html() + '.txt')});
   })
   </script>
 
@@ -45,10 +60,20 @@
 
     <div class=“row”>
       <div class="three columns">
-        <div id="lyric-menu"></div>
+        <button type="button" id="button1">あのね</button>
+        <button type="button" id="button2">おやすみなさい</button>
+        <button type="button" id="button3">空色</button>
+        <button type="button" id="button4">曖昧に揺れる15cm</button>
+        <button type="button" id="button5">おかえりなさい</button>
+        <button type="button" id="button6">大人のフリ</button>
+        <button type="button" id="button7">海が見える</button>
+        <button type="button" id="button8">君のピアノ</button>
       </div>
       <div class="nine columns">
         <p>左のメニューから歌詞を選択してください。</p>
+        <pre><code>
+          <div id="lyric"></div>
+        </code></pre>
       </div>
     </div>
   </div>
