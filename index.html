@@ -12,12 +12,14 @@
     $("#header").load("header.html");
     $("#footer").load("footer.html");
     $("#menu").load("menu.html");
-    $("#info161203").load("info/161203.html");
-    $("#info161204").load("info/161204.html");
-    $("#info161231").load("info/161231.html");
-    $("#info170110").load("info/170110.html");
-    $("#info170122").load("info/170122.html");
-    $("#info170125").load("info/170125.html");
+    $("#info").load("info.html");
+
+    // load information path
+    var num = ["161203","161204","161231","170110","170122","170125"];
+    jQuery.each(num,function() {
+      var path = 'info/'+ this + '.html';
+      $("#" + this).load(path);
+    });
 })
   </script>
 
@@ -49,25 +51,21 @@
 
 <div class="container">
 <div id="contents">
-  <h2 class="info">Information</h2>
-  <section class="sec">
-  <div id="info170125"></div>
-  </section>
-  <section class="sec">
-  <div id="info170122"></div>
-  </section>
-  <section class="sec">
-  <div id="info170110"></div>
-  </section>
-  <section class="sec">
-  <div id="info161231"></div>
-  </section>
-  <section class="sec">
-  <div id="info161204"></div>
-  </section>
-  <section class="sec">
-  <div id="info161203"></div>
-  </section>
+<h2 class="info">Information</h2>
+
+<p id="infomation"></p>
+
+<script>
+// get information iterative
+var hoge = ""
+var id = ["170125","170122","170110","161231","161204","161203"];
+$.each(id,function(i,value){
+  hoge += "<section class='sec'><div id=\'" + value + "\'</div></section>";
+});
+var elem = document.getElementById("infomation");
+elem.innerHTML = hoge
+</script>
+
 </div>
 
 <div id="footer"></div>
