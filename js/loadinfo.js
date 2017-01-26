@@ -5,7 +5,7 @@ $(function(){
   $("#info").load("info.html");
 
   // load information path
-  var num = ["161203","161204","161231","170110","170122","170125"];
+  var num = arr;// defined at displayinfo.js
   jQuery.each(num,function() {
     var path = 'info/'+ this + '.html';
     $("#" + this).load(path);
