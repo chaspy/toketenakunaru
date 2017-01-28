@@ -1,6 +1,6 @@
 var arr = [];
 $.ajax({
-  url: 'infoalllist',
+  url: 'info/infoalllist',
   async:false, //wait to finish ajax connection
   success: function(data){
     arr = data.split(/\r\n|\r|\n/);

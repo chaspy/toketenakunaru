@@ -1,7 +1,7 @@
 // get early 3 file from info file list.
 var arr = [];
 $.ajax({
-  url: 'infolist',
+  url: 'info/infolist',
   async:false, //wait to finish ajax connection
   success: function(data){
     arr = data.split(/\r\n|\r|\n/);
