@@ -18,4 +18,5 @@ deployment:
     commands:
       - ./getfile.sh
       - aws s3 sync . s3://toketenakunaru.com/ --delete
+      - aws configure set preview.cloudfront true
       - aws cloudfront create-invalidation --distribution-id E34VDY88MT89ZH --paths '/*'
